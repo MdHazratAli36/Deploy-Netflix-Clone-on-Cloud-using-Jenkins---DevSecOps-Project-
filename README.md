@@ -81,7 +81,8 @@ docker images
 docker run -d  -p 8081:80 netflix
 ```
 
-then if we open browser again we can see whole netflix page
+Then if we open browser again we can see whole netflix page
+
 **Phase 2: Security**
 
 1. **Install SonarQube and Trivy:**
