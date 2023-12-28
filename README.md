@@ -14,19 +14,6 @@
   <p align="center">Home Page</p>
 </div>
 
-<<<<<<< HEAD
-# **Youtube Video for step by step Demonstration!**
-
-[![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
-
-## Susbcribe:
-
-[https://www.youtube.com/@cloudchamp?
-](https://www.youtube.com/@cloudchamp?sub_confirmation=1)
-=======
-
->>>>>>> 212fc6504ac824fed536164149a50ae8a7876a4c
-
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 
 ### **Phase 1: Initial Setup and Deployment**
@@ -48,6 +35,7 @@
 **Step 3: Install Docker and Run the App Using a Container:**
 
 - Set up Docker on the EC2 instance:
+
   ```bash
 
   sudo apt-get update
@@ -56,10 +44,14 @@
   newgrp docker
   sudo chmod 777 /var/run/docker.sock
   ```
+
 - Build and run your application using Docker containers:
+
   ```bash
   docker build -t netflix .
   docker run -d --name netflix -p 8081:80 netflix:latest
+  then copy instance public ip and open new browser mention port number
+
 
   #to delete
   docker stop <containerid>
@@ -84,6 +76,12 @@ Now recreate the Docker image with your api key:
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 ```
 
+```
+docker images
+docker run -d  -p 8081:80 netflix
+```
+
+then if we open browser again we can see whole netflix page
 **Phase 2: Security**
 
 1. **Install SonarQube and Trivy:**
@@ -747,8 +745,7 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 **Phase 7: Cleanup**
 
 1. **Cleanup AWS EC2 Instances:**
-<<<<<<< HEAD
+   <<<<<<< HEAD
+   - # Terminate AWS EC2 instances that are no longer needed.
    - Terminate AWS EC2 instances that are no longer needed.
-=======
-    - Terminate AWS EC2 instances that are no longer needed.
->>>>>>> 212fc6504ac824fed536164149a50ae8a7876a4c
+     > > > > > > > 212fc6504ac824fed536164149a50ae8a7876a4c
