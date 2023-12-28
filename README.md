@@ -86,25 +86,33 @@ Then if we open browser again we can see whole netflix page
 **Phase 2: Security**
 
 1. **Install SonarQube and Trivy:**
+
    - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
      sonarqube
+
      ```
      docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
      ```
+
      To access:
      publicIP:9000 (by default username & password is admin)
-     To install Trivy:
+
      ```
+     To install Trivy:
+
      sudo apt-get install wget apt-transport-https gnupg lsb-release
      wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
      echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
      sudo apt-get update
      sudo apt-get install trivy
      ```
+
      to scan image using trivy
+
      ```
      trivy image <imageid>
      ```
+
 2. **Integrate SonarQube and Configure:**
    - Integrate SonarQube with your CI/CD pipeline.
    - Configure SonarQube to analyze code for quality and security issues.
@@ -135,6 +143,14 @@ Then if we open browser again we can see whole netflix page
    sudo systemctl start jenkins
    sudo systemctl enable jenkins
    ```
+
+   - for confirmation of jenkins
+
+   ```
+    sudo service jenkins status
+   ```
+
+   if status is running then follow bellow
 
    - Access Jenkins in a web browser using the public IP of your EC2 instance.
      publicIp:8080
