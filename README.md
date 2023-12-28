@@ -14,6 +14,7 @@
   <p align="center">Home Page</p>
 </div>
 
+<<<<<<< HEAD
 # **Youtube Video for step by step Demonstration!**
 
 [![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
@@ -22,6 +23,9 @@
 
 [https://www.youtube.com/@cloudchamp?
 ](https://www.youtube.com/@cloudchamp?sub_confirmation=1)
+=======
+
+>>>>>>> 212fc6504ac824fed536164149a50ae8a7876a4c
 
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 
@@ -30,7 +34,8 @@
 **Step 1: Launch EC2 (Ubuntu 22.04):**
 
 - Provision an EC2 instance on AWS with Ubuntu 22.04.
-- Connect to the instance using SSH.
+- before connect to instance have to create elastic IP(allocate elastic ip address and give name>save then Associate Elastic IP address and attach created instance)
+- Connect to the instance directly or using SSH.
 
 **Step 2: Clone the Code:**
 
@@ -742,4 +747,8 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 **Phase 7: Cleanup**
 
 1. **Cleanup AWS EC2 Instances:**
+<<<<<<< HEAD
    - Terminate AWS EC2 instances that are no longer needed.
+=======
+    - Terminate AWS EC2 instances that are no longer needed.
+>>>>>>> 212fc6504ac824fed536164149a50ae8a7876a4c
